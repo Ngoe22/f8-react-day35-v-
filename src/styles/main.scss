@@ -25,7 +25,7 @@ body {
 
     background-image: url(../assets/bg.png);
     background-size: cover; /* phóng to */
-    background-repeat: repeat; 
+    background-repeat: repeat;
     background-position: center; /* căn giữa */
 }
 
@@ -35,4 +35,25 @@ select,
 textarea {
     font-family: inherit;
     font-size: inherit;
+}
+
+/* width scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* track (background) */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* thumb (cục kéo) */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

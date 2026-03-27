@@ -1,10 +1,12 @@
 .buttonList {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
-    width: 60%;
+    width: 60vw;
+    height: 80vh;
+
     border-radius: 10px;
     margin: 10vh auto;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .buttonList > li {
