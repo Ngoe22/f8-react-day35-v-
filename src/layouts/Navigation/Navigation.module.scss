@@ -1,0 +1,9 @@
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navLink.active {
+    color: tomato;
+}

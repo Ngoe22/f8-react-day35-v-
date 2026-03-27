@@ -1,0 +1,126 @@
+.button {
+    display: inline-block;
+    background: none;
+    padding: 0;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 2px;
+
+    box-shadow: -1px 1px 1px 2px rgba(74, 74, 74, 0.5);
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: -1px 1px 1px 2px rgba(74, 74, 74, 0.4);
+        translate: 0 -3px;
+    }
+
+    &:active {
+        box-shadow: none;
+        translate: 0 0px;
+    }
+
+    &.primary {
+        background-color: rgb(81, 129, 197);
+        border-color: rgb(81, 129, 197);
+
+        &:hover {
+            background-color: rgb(81, 129, 197);
+            color: white;
+        }
+    }
+
+    &.small {
+        font-size: 1.4rem;
+        padding: 2px 5px;
+    }
+
+    &.medium {
+        font-size: 1.6rem;
+        padding: 5px 10px;
+    }
+
+    &.big {
+        font-size: 2.2rem;
+        padding: 10px 30px;
+    }
+
+    &.bordered {
+        border-width: 1px;
+        background-color: transparent;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.9);
+    }
+
+    &.rounded {
+        border-radius: 999px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &.loading {
+        position: relative;
+        color: transparent;
+        pointer-events: none;
+        user-select: none;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 20px;
+            width: 20px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            translate: 50% -50%;
+
+            background-color: white;
+            -webkit-mask: url(../../assets/circle-notch-solid.svg) no-repeat
+                center / contain;
+            mask: url(../../assets/circle-notch-solid.svg) no-repeat center /
+                contain;
+
+            animation-name: myAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.my-custom-class {
+    font-weight: 600;
+    background: #8bdeda; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #ef9393,
+        #e17dc2,
+        #998ee0,
+        #43add0,
+        #8bdeda
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ef9393,
+        #e17dc2,
+        #998ee0,
+        #43add0,
+        #8bdeda
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@keyframes myAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

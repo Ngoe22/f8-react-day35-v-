@@ -1,0 +1,15 @@
+.buttonList {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+    margin: 10vh auto;
+    overflow: hidden;
+}
+
+.buttonList > li {
+    margin: 10px 0;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+}
