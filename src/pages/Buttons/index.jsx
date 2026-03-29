@@ -45,13 +45,13 @@ function ButtonsPage() {
     ];
 
     return (
-        <>
+        <div className={style.buttonWrapper}>
             <ul className={style.buttonList}>
                 {list.map((item, index) => {
                     return <li key={index}>{item}</li>;
                 })}
             </ul>
-        </>
+        </div>
     );
 }
 

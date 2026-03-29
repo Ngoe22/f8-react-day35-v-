@@ -4,8 +4,8 @@ import styles from "./Navigation.module.scss";
 function Navigation() {
     const navList = [
         ["/", "Home"],
-        ["/news", "News"],
-        ["/contact", "Contact"],
+        ["/buttons", "Buttons"],
+        ["/comments", "Comments"],
     ].map((value, index) => {
         return (
             <li key={index}>
