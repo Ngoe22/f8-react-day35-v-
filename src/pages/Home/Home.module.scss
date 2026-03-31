@@ -1,0 +1,22 @@
+.homeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(../../assets/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.heading {
+    color: white;
+    font-size: 7rem;
+    text-shadow: 0 1px 3px rgba(95, 95, 95, 0.5);
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.64);
+    border-radius: 5px;
+    line-height: 1.5;
+}

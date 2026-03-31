@@ -1,11 +1,21 @@
+import React from "react";
 import { NavLink } from "react-router";
 import styles from "./Navigation.module.scss";
+import listIcon from "../../assets/list-solid.svg";
+import arrow from "../../assets/arrow-left-long-solid.svg";
 
 function Navigation() {
+    const [show, setShow] = React.useState(false);
+
     const navList = [
         ["/", "Home"],
-        ["/buttons", "Buttons"],
+        ["/counter", "Counter"],
         ["/comments", "Comments"],
+        ["/products", "Products"],
+        ["/buttons", "Buttons"],
+        ["/profile", "Profile"],
+        ["/weather", "Weather"],
+        ["/todo", "Todo"],
     ].map((value, index) => {
         return (
             <li key={index}>
@@ -23,10 +33,33 @@ function Navigation() {
         );
     });
 
+    console.log(show);
+
     return (
-        <nav className={styles.navList}>
-            <ul>{navList}</ul>
-        </nav>
+        <>
+            <div
+                className={`${styles.navBack} ${show ? styles.hidden : ``}`}
+                onClick={() => {
+                    setShow(!show);
+                }}
+            >
+                <img src={listIcon} alt="" />
+            </div>
+
+            <nav className={`${styles.navList} ${show ? styles.show : ``}`}>
+                <ul>
+                    <li
+                        className={styles.navBackIn}
+                        onClick={() => {
+                            setShow(!show);
+                        }}
+                    >
+                        <img src={arrow} alt="" />
+                    </li>
+                    {navList}
+                </ul>
+            </nav>
+        </>
     );
 }
 

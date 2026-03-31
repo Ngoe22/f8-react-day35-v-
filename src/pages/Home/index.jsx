@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 import Navigation from "../../layouts/Navigation";
+import styles from "./Home.module.scss";
 
 function Home() {
     return (
         <>
-            <h1>Daddy`s Home</h1>
             <Navigation></Navigation>
+            <div className={styles.homeWrapper}>
+                <h1  className={styles.heading}>Chào mừng đến với F8 React Day 35</h1>
+            </div>
         </>
     );
 }

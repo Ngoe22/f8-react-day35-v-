@@ -14,7 +14,7 @@
 }
 
 .buttonList {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     width: min(60vw, 500px);
     height: 80vh;
@@ -24,9 +24,7 @@
     overflow: auto;
 
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .buttonList > li {
@@ -35,3 +33,4 @@
     display: flex;
     justify-content: center;
 }
+

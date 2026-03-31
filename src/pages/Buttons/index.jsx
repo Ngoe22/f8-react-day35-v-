@@ -1,5 +1,6 @@
 import Button from "../../components/Button";
 import style from "./Buttons.module.scss";
+import Navigation from "../../layouts/Navigation";
 
 function ButtonsPage() {
     const list = [
@@ -45,13 +46,16 @@ function ButtonsPage() {
     ];
 
     return (
-        <div className={style.buttonWrapper}>
-            <ul className={style.buttonList}>
-                {list.map((item, index) => {
-                    return <li key={index}>{item}</li>;
-                })}
-            </ul>
-        </div>
+        <>
+            <Navigation></Navigation>
+            <div className={style.buttonWrapper}>
+                <ul className={style.buttonList}>
+                    {list.map((item, index) => {
+                        return <li key={index}>{item}</li>;
+                    })}
+                </ul>
+            </div>
+        </>
     );
 }
 
